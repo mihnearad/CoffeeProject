@@ -67,12 +67,13 @@
 				echo "No Results";
 			}
 
-
-
-
-
 			$conn-> close();
 			?>
 		</table>
+		<p>
+			<a href ="index.php">
+				<button type="button" style=background-color:white >Back</button>
+			</a>
+		</p>
 	</body>
 </html>
