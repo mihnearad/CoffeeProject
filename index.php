@@ -5,10 +5,13 @@
 	<title>Please rate your coffee</title>
 <style>
 
-h1   {color: black;font-size:25px}
-
+h1   {color: black;font-size:25px;font-family:monospace}
+p {color: black;font-size:16px;font-family:monospace}
+button {color: black;font-family:monospace}
 </style>
+
 </head>
+
 <body>
 
 <body style="background-color:#E8E8E8;">
@@ -93,7 +96,7 @@ h1   {color: black;font-size:25px}
 
 			<input
 
-			type="submit" style=background-color:white;  value="Submit" >
+			type="submit" style=background-color:white;font-family:monospace;  value="Submit" >
 
 
 		</form>
