@@ -1,5 +1,8 @@
 <html>
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		 <link href="styles.css" rel="stylesheet">
+		 
 		<style type="text/css">
 			table{
 				border-collapse: collapse:;
@@ -7,8 +10,8 @@
 				color: #000000;
 				font-family: monospace;
 				fontsize: 14px;
-				text-align: left;
-				padding: 5px;
+				text-align: center;
+				padding: 0px;
 				border-bottom: 1px solid #eb4034;
 			}
 
@@ -23,6 +26,14 @@
 
 
 			</style>
+			
+			<div class="topnav">
+  <a href="index.php">CoffeeRate</a>
+  <a class="active" href="results.php">Results</a>
+  <a href="avgbytype.php">Averages</a>
+</div>
+
+
 	</head>
 
 	<body>
@@ -43,7 +54,7 @@
 			</tr>
 			<?php
 			$conn = mysqli_connect("localhost", "form", "D&LxJ95EdZbG$", "coffeeproject");
-			$sql = "select `Entry#` as '#', Date_Format(Date,'%d-%M-%Y') as Date, Date_Format(Time,'%H:%i') as Time, `Coffee Type`, Beans, `Time Brew`, Output, Format(Output / Beans,2) as 'Ratio', Format(Output / `Time Brew`,2) as 'ML/S', Grade, Users.User from coffeelist left join coffeetype on CoffeeType_ID = CoffeeType left join users on users.User_ID=coffeelist.User order by `Entry#` asc;";
+			$sql = "select `Entry#` as '#', Date_Format(Date,'%d-%M-%Y') as Date, Date_Format(Time,'%H:%i') as Time, `Coffee Type`, Beans, `Time Brew`, Output, Format(Output / Beans,2) as 'Ratio', Format(Output / `Time Brew`,2) as 'ML/S', Grade, users.User from coffeelist left join coffeetype on CoffeeType_ID = CoffeeType left join users on users.User_ID=coffeelist.User order by `Entry#` asc;";
 			$result = $conn-> query($sql);
 
 			if ($result->num_rows > 0) {
