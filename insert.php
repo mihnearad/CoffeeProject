@@ -3,6 +3,14 @@
 
 <head>
 	<title>Insert Page page</title>
+	 <link href="styles.css" rel="stylesheet">
+	 
+	<div class="topnav">
+  <a href="index.php">CoffeeRate</a>
+  <a href="results.php">Results</a>
+  <a href="avgbytype.php">Averages</a>
+  
+</div>
 </head>
 
 <body>
@@ -13,7 +21,7 @@
 		// username => root
 		// password => empty
 		// database name => coffeeproject
-		$conn = mysqli_connect("localhost", "form", "xxxxxxxxx", "coffeeproject");
+		$conn = mysqli_connect("localhost", "form", "D&LxJ95EdZbG$", "coffeeproject");
 		
 		// Check connection
 		if($conn === false){
@@ -39,9 +47,7 @@
 		VALUES ('$Date','$Time','$CoffeeType','$Beans','$TimeBrew','$Output','$Acidity','$Comments','$Grade','$User')";
 		
 		if(mysqli_query($conn, $sql)){
-			echo "<h3>Data stored in the database successfully."
-				. " Please browse your localhost php my admin"
-				. " to view the updated data</h3>";
+			echo "<h3>Coffee Added!";
 
 /* 			echo nl2br("\n$Date\n $Time\n "
 				. "$CoffeeType\n $Beans\n $TimeBrew"); */
