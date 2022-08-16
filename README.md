@@ -10,3 +10,16 @@ Workflow:
 2. Start making coffee and stard recording variables
 3. When done, publish to DB 
 4. From time to time check PowerBi dashboard to check results.
+
+# Main Page
+
+![Main Page](https://github.com/mihnearad/CoffeeProject/blob/main/Previews/Preview-main-page.png)
+
+# Results Page
+
+![Results Page](https://github.com/mihnearad/CoffeeProject/blob/main/Previews/Preview-results-page.png)
+
+# Averages Page
+
+![Averages Page](https://github.com/mihnearad/CoffeeProject/blob/main/Previews/preview-averages-page.png)
+
