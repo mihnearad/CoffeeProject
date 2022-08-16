@@ -1,0 +1,68 @@
+
+
+h1   {color: black;font-size:25px;font-family:monospace}
+p {color: black;font-size:16px;font-family:monospace}
+button {color: black;font-family:monospace}
+
+	table{
+				border-collapse: collapse:;
+				border-style:
+				width:fit;
+				color: #000000;
+				font-family: monospace;
+				fontsize: 15px;
+				text-align: center;
+				padding: 0px;
+			#	border-bottom: 1px solid #eb4034;
+				border-style: solid;
+				border-color: #eb4034
+			}
+
+			th {
+				background-color: #eb4034;
+				color:white;
+				
+			}
+			
+			td {
+				padding: 2px 15px;
+				
+			}
+			table td + td { border-left:2px solid red; }
+
+
+
+
+	#		tr:nth-child(even) {background-color: #ededed}
+
+/*Styling the top bar*/
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: monospace;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #eb4034;
+  color: white;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #eb4034;
+  color: white;
+}
+
