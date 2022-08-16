@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Please rate your coffee</title>
-<style>
+	<link href="styles.css" rel="stylesheet">
+	
 
-h1   {color: black;font-size:25px;font-family:monospace}
-p {color: black;font-size:16px;font-family:monospace}
-button {color: black;font-family:monospace}
-</style>
+<div class="topnav">
+  <a class="active" href="index.php">CoffeeRate</a>
+  <a href="results.php">Results</a>
+  <a href="avgbytype.php">Averages</a>
+</div>
+
 
 </head>
 
-<body>
+<body class="class-for-index">
 
-<body style="background-color:#E8E8E8;">
+<body style="background-color:white;">
 
 
 	<left>
-		<h1>Please rate your coffee</h1>
+		
 
 		<form action="insert.php" method="post">
 
@@ -96,19 +99,61 @@ button {color: black;font-family:monospace}
 
 			<input
 
-			type="submit" style=background-color:white;font-family:monospace;  value="Submit" >
+			type="submit" style=font-family:monospace;  value="Submit" >
 
 
 		</form>
 
-<p>
-	<a href ="results.php">
-		<button type="button" style=background-color:white >Results</button>
-	</a>
-</p>
-
-
 
 	</center>
+	
+ &nbsp
+
+	
+		<table>
+			<tr>
+				<th>Nr #</th>
+				<th>Time</th>
+				<th>User</th>
+				<th>Grade</th>
+				<th>Output</th>
+				<th>Acidity</th>
+				<th>Time Brew</th>
+				<th>ML/S</th>
+				<th>Ratio</th>
+				<th>Coffee Type</th>
+				<th>Comments </th>
+			</tr>
+			<?php
+			$conn = mysqli_connect("localhost", "form", "D&LxJ95EdZbG$", "coffeeproject");
+			$sql = "select `Entry#` as 'Coffee Nr', Time, users.User, Grade as Grade, Output as Output, Acidity, `Time Brew`, Format(Output / `Time Brew`,2) as 'ML/S',Format(Output / Beans,2) as 'Ratio', Beans, coffeetype.`Coffee Type`, Comments from coffeelist left join coffeetype on coffeelist.`CoffeeType`=CoffeeType_ID left join users on users.User_ID=coffeelist.User where Date=CURDATE() group by users.User;";
+			$result = $conn-> query($sql);
+
+			if ($result->num_rows > 0) {
+				while($row = $result-> fetch_assoc()) {
+					echo "<tr><td>" .
+					$row["Coffee Nr"] . 	"</td><td>" .
+					$row["Time"] . "</td><td>" .
+					$row["User"] . "</td><td>" .
+					$row["Grade"] . "</td><td>" .
+					$row["Output"] . "</td><td>" .
+					$row["Acidity"] . "</td><td>" .
+					$row["Time Brew"] . "</td><td>" .
+					$row["ML/S"] . "</td><td>" .
+					$row["Ratio"] . "</td><td>" .
+
+					$row["Coffee Type"] . "</td><td>" .
+					$row["Comments"] . "</td></tr>" 	;}
+
+			}
+
+			else {
+				;
+			}
+
+			$conn-> close();
+			?>
+		</table>
+	
 </body>
 </html>
