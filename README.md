@@ -14,12 +14,3 @@ Workflow:
 # Main Page
 
 ![Main Page](https://github.com/mihnearad/CoffeeProject/blob/main/Previews/Preview-main-page.png)
-
-# Results Page
-
-![Results Page](https://github.com/mihnearad/CoffeeProject/blob/main/Previews/Preview-results-page.png)
-
-# Averages Page
-
-![Averages Page](https://github.com/mihnearad/CoffeeProject/blob/main/Previews/preview-averages-page.png)
-
